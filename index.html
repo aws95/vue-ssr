@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{{ meta.inject().title.text() }}} {{{ meta.inject().meta.text() }}}
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <% if (process.env.NODE_ENV === 'development') { %>
+    <link rel="stylesheet" href="public/app.css" />
+    <% } %>
+  </head>
+  <body>
+    <!--vue-ssr-outlet-->
+    <% if (process.env.NODE_ENV === 'development') { %>
+    <script src="public/app.js"></script>
+    <% } %>
+  </body>
+</html>

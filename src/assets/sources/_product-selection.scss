@@ -1,0 +1,82 @@
+/****** Product selection ******/
+.product-selection {
+  overflow-x: hidden;
+  // this is the only viable solution to display content over overflow hidden
+  padding: 0 20px 70px;
+  margin: 0 -20px;
+  margin-bottom: -80px !important;
+  .section-title {
+    font-size: $font-size-base;
+    @media(min-width: $screen-md-min) {
+      font-size: $font-size-large;
+    }
+    .slick-arrow {
+      position: relative;
+      font-size: 16px;
+      color: $gray-base;
+      bottom: -10px;
+    }
+  }
+  .products-list:hover {
+    z-index: 9;
+    position: relative;
+  }
+  .section-title {
+    line-height: 35px;
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left:12px;
+    margin-right:12px;
+  }
+  .slick-list {
+    overflow: visible;
+    z-index: 2;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 0;
+    z-index: 1;
+  }
+}
+
+#main-menu .nav .product-selection {
+  .item:hover {
+    margin: 0;
+    padding: 10px 12px;
+    box-shadow: none;
+  }
+}
+
+.product-selection .product-list{
+  display: block !important;
+  .selection-title {
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: 5px;
+  }
+  .item:hover {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+.cms-soldes {
+  .product-selection {
+    margin-bottom: 0px !important;
+  }
+}
+
+a {
+  &.button-selection {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: #000;
+    color: white;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

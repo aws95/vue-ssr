@@ -1,0 +1,52 @@
+.price-box {
+  height: 35px;
+  margin-bottom: 20px;
+  .price-label {
+    display: none;
+  }
+  p {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+  }
+  .regular-price, .special-price, .full-product-price, .price-from {
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
+
+  .price-as-configured {
+    display: block;
+  }
+
+  .special-price, .price-from {
+    color: $red;
+    display: block;
+  }
+
+  .old-price, .original-product-price {
+    position: relative;
+    color: $gray-light;
+    font-family: Oswald;
+    font-size: $font-size-small * 1.2;
+    margin-top: 3px;
+    &:before {
+      border: 1px solid $gray-light;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: rotate(-10deg);
+    }
+  }
+  .price-to {
+    display: none;
+  }
+}
+
+.price_autocomplete {
+  .special-price, .price-from  {
+    position:absolute;
+    left:63px;
+  }
+}

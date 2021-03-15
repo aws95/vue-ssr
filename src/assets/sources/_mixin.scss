@@ -1,0 +1,108 @@
+// main button
+@mixin button($enableHover: true) {
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: $gray-base;
+  color: white;
+  border: 1px solid $gray-base;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0;
+  @if ($enableHover) {
+    &:hover {
+      background-color: white;
+      color: $gray-base;
+      @include transition-property(background-color);
+      @include transition-duration(350ms);
+      @include transition-timing-function(ease-out);
+    }
+  }
+  &.loading {
+    background: white url('../images/loading.gif') no-repeat center;
+    color: transparent;
+  }
+}
+
+@mixin button-inverted() {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: white;
+  color: $gray-base;
+  border: 1px solid $gray-base;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0;
+}
+
+@mixin stripped-title($min-width: 30%) {
+  text-align: center;
+  background: repeating-linear-gradient(0deg, #fff, #fff 4px, $gray-lighter 0px, $gray-lighter 5px);
+  min-height: 36px;
+  & > p, & > a {
+    background-color: white;
+    min-width: $min-width;
+    line-height: 28px;
+    display: inline-block;
+    margin: 2px 0;
+    padding: 0 5%;
+    text-transform: uppercase;
+  }
+}
+
+@mixin lepapeico() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lepapeico' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/** Style for Menu items by level, change design only here !!  **/
+@mixin level1-parent() {
+  //  margin-bottom: 24px;
+  & > a, & > span {
+    display: block;
+    color: $gray-base;
+    font-weight: bold;
+    border-bottom: 1px solid $gray-lighter;
+    margin: 10px 0;
+    padding-bottom: 5px;
+  }
+}
+
+@mixin level2-parent() {
+  & > a, & > span {
+    display: inline-block;
+    font-weight: bold;
+    color: $gray-base;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+  }
+  & > ul {
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+}
+
+@mixin level3-parent() {
+  margin-top: 5px;
+  &.first {
+    margin-top: 0;
+  }
+  & > a, & > span {
+    font-weight: bold;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}

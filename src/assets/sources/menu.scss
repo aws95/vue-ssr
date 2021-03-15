@@ -1,0 +1,243 @@
+/****** main menu ******/
+.menu {
+  position: relative;
+  z-index: 15;
+  @include make-sm-column(12);
+  padding: 0;
+  #main-menu {
+    padding: 0;
+    .nav {
+      width: 100%;
+      position: inherit;
+      background-color: $menu-background-color;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li.level0 {
+      position: inherit;
+      text-transform: uppercase;
+      & > a.level-top, & > span.level-top {
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        padding: 0 $menu-item-spacing;
+        line-height: $menu-height;
+        font-size: $font-size-small;
+      }
+      @media(max-width: $screen-lg-min) {
+        & > a.level-top {
+          padding: 0 ($menu-item-spacing - 2);
+        }
+      }
+      &:hover {
+        & > a.level-top, & > span.level-top {
+          background-color: white;
+          color: #000000;
+        }
+      }
+    }
+    .mega-menu {
+      position: absolute;
+      display: none;
+      width: 100%;
+      opacity: 0;
+      left: 0;
+      background-color: white;
+      padding: 12px 0;
+      text-transform: none;
+      &.active {
+        display: block;
+        opacity: 1;
+        z-index: 999;
+      }
+      .block-bottom {
+        margin-top: 12px;
+        & > ul:before {
+          padding-bottom: 12px;
+          display: block;
+          content: '';
+          width: 100%;
+          border-top: 1px solid $gray-lighter;
+
+        }
+        li {
+          @include make-sm-column(2);
+        }
+      }
+    }
+    li > a {
+      color: $gray-dark;
+      &:hover {
+        color: $gray-base;
+      }
+      i {
+        display: inline-block;
+        font-size: 0.45em;
+        margin-right: 2px;
+        margin-top: -4px;
+        color: white;
+      }
+      &:hover > i {
+        color: black;
+      }
+    }
+    li.level1 {
+      @include level1-parent();
+    }
+
+    // level 2
+    ul.submenu1.all-parent li.level2, li.level2.parent {
+      margin-top: 6px;
+      &:first-child {
+        margin-top: 0;
+      }
+      @include level2-parent();
+    }
+    // @todo remove this in php menu rendering
+    ul.submenu1.all-parent li.level2 > a i {
+      display: none !important;
+    }
+
+    // level 3
+    li.level3 {
+      font-size: $font-size-base;
+    }
+    ul.submenu2.all-parent li.level3, li.level3.parent {
+      @include level3-parent();
+    }
+
+    // menu exceptions
+    li.nav-6, li.nav-11 {
+      border-right: 2px solid #ffffff;
+    }
+    li.nav-3-5, li.nav-3-6 {
+      clear: left !important;
+      a, div {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+      }
+    }
+    li.nav-5 {
+      .nav-5-1, .nav-5-2, .nav-5-3, .nav-5-4 {
+        width: 18%;
+      }
+      .nav-5-5 {
+        width: 28%;
+      }
+    }
+    li.nav-9-4 {
+      margin-top: -135px;
+      a, div {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+      }
+    }
+    li.nav-9-5 {
+      clear: left !important;
+      margin-top: -50px;
+      a, div {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    li.nav-10-4 {
+      margin-top: -140px;
+    }
+
+    li.nav-10-5 {
+      margin-top: -45px;
+    }
+  }
+  .menu-col-1 {
+    width: 100%;
+  }
+  .menu-col-2 {
+    @include make-md-column(6);
+  }
+  .menu-col-3 {
+    @include make-md-column(4);
+  }
+  .menu-col-4 {
+    @include make-md-column(3);
+  }
+  .menu-col-5 {
+    @include make-md-column(2.4);
+  }
+  .menu-col-6 {
+    @include make-md-column(2);
+  }
+  .nav-brand {
+    text-transform: uppercase;
+    .nav-item {
+      text-transform: none;
+    }
+  }
+  .nav-brand, .nav-product-selection {
+    float: right;
+  }
+  .nav-brand .alphabet-separator {
+    color: black;
+    margin-left: 11px
+  }
+  .nav-product-selection .title {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray-lighter;
+    a {
+      color: #4d4d4d;
+      font-weight: bold;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.mobile-menu-container {
+  padding: 0;
+  background-color: white;
+  border-bottom: 2px solid $gray-base;
+  a {
+    margin-left: 15px;
+    font-size: 2em;
+  }
+
+}
+
+#main-menu-mobile {
+  .product-selection {
+    margin-top: -20px;
+    background-color: white;
+  }
+  .product-list .item {
+    width: 100% !important;
+    @media(min-width: 600px) {
+      width: 49.5% !important;
+    }
+    &:hover {
+      padding: 10px 12px;
+    }
+  }
+  .mm-navbar-top {
+    padding: 0 15px;
+    height: 50px;
+    .form-search {
+      border: none;
+    }
+  }
+  .mm-panels {
+    top: 50px;
+  }
+  .nav-product-selection span, .nav-brand span {
+    text-transform: uppercase;
+  }
+}

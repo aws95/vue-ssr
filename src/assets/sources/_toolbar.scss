@@ -1,0 +1,96 @@
+/****** Toolbar ******/
+.toolbar {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-top: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  text-transform: uppercase;
+  strong {
+    display: none;
+    float: left;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+  .pager {
+    margin: 0;
+    @media(max-width: $screen-sm-min) {
+     Margin-top: 15px !important;
+    }
+    ol {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      line-height: 25px;
+    }
+    a, li.current {
+      position: relative;
+      border: none;
+      padding: 3px 7px;
+      margin: 0 2px;
+      font-weight: bold;
+      &:hover {
+        background-color: white;
+      }
+    }
+    a.next {
+      margin-top: 5px;
+    }
+    li.current:after {
+      bottom: 0;
+      content: " ";
+      left: 25%;
+      margin: auto;
+      position: absolute;
+      width: 50%;
+      border-bottom: 1px solid $gray-base;
+    }
+  }
+  .sort-by {
+    display: inline-block;
+    label {
+      float: left;
+      margin-bottom: 0;
+      line-height: 27px;
+      margin-right: 5px;
+    }
+    .select-wrapper {
+      position: relative;
+      float: left;
+      line-height: 25px;
+      padding-right: 15px;
+      overflow: hidden;
+      width: auto;
+      border: 1px solid $gray-lighter;
+      select {
+        background: transparent;
+        border: none;
+        height: 25px;
+        padding: 5px;
+        width: 150%;
+        cursor: pointer;
+      }
+    }
+    a {
+      display: inline-block;
+      line-height: 27px;
+      width: 25px;
+      margin-left: 5px;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+  .amount span {
+    line-height: 30px;
+  }
+  .item-number{
+    strong {
+      display: inline;
+      float: none;
+    }
+    span {
+      @media(max-width: $screen-lg-min) {
+        display: none;
+      }
+    }
+  }
+}

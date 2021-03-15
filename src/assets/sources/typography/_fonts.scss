@@ -1,0 +1,692 @@
+$font-path: '../fonts';
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $version: '1.0') {
+	@font-face {
+	  font-family: "#{$font-family}";
+	  src: url("#{$font-filename}.eot?v=#{$version}");
+	  src: url("#{$font-filename}.eot?v=#{$version}#iefix") format("embedded-opentype"),/* IE6-IE8 */
+	  url("#{$font-filename}.svg?v=#{$version}") format("svg"),
+	  url("#{$font-filename}.woff?v=#{$version}") format("woff"),
+	  url("#{$font-filename}.ttf?v=#{$version}") format("truetype");
+	  font-weight: $font-weight;
+	  font-style: $font-style;
+	}
+}
+
+/* Avenir */
+$primary-font-family: 'Avenir Book';
+
+@font-face{
+	font-family: $primary-font-family;
+	src:url("../fonts/avenir/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+	src:url("../fonts/avenir/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),url("../fonts/avenir/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),url("../fonts/avenir/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),url("../fonts/avenir/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype"),url("../fonts/avenir/0979215b-3a1b-4356-9c76-e90fa4551f1d.svg#0979215b-3a1b-4356-9c76-e90fa4551f1d") format("svg");
+}
+@font-face{
+	font-family: $primary-font-family;
+	src:url("../fonts/avenir/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+	src:url("../fonts/avenir/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),url("../fonts/avenir/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),url("../fonts/avenir/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),url("../fonts/avenir/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),url("../fonts/avenir/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+	font-weight: bold;
+}
+@font-face{
+	font-family: $primary-font-family;
+	src:url("../fonts/avenir/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix");
+	src:url("../fonts/avenir/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix") format("eot"),url("../fonts/avenir/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2") format("woff2"),url("../fonts/avenir/f1ebae2b-5296-4244-8771-5f40e60a564a.woff") format("woff"),url("../fonts/avenir/04d1bf6c-070d-4b7e-9498-6051c9f0c349.ttf") format("truetype"),url("../fonts/avenir/d0a3e813-1257-4b66-812a-36101faa0fb3.svg#d0a3e813-1257-4b66-812a-36101faa0fb3") format("svg");
+	font-style: italic;
+}
+
+/* Oswald */
+$second-font-family: 'Oswald';
+
+@include declare-font-face($second-font-family, "#{$font-path}/oswald/oswald-light", light, normal, '1.105');
+
+@include declare-font-face($second-font-family, "#{$font-path}/oswald/oswald-regular", normal, normal, '1.105');
+
+@include declare-font-face($second-font-family, "#{$font-path}/oswald/oswald-bold", bold, normal, '1.105');
+
+@font-face {
+	font-family: 'lepapeico';
+	src:  url('../fonts/lepapeico/lepapeico.eot?frvulu');
+	src:  url('../fonts/lepapeico/lepapeico.eot?frvulu#iefix') format('embedded-opentype'),
+	url('../fonts/lepapeico/lepapeico.woff2?frvulu') format('woff2'),
+	url('../fonts/lepapeico/lepapeico.ttf?frvulu') format('truetype'),
+	url('../fonts/lepapeico/lepapeico.woff?frvulu') format('woff'),
+	url('../fonts/lepapeico/lepapeico.svg?frvulu#lepapeico') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'lepapeico' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-smart-watch {
+	&:before {
+		content: $ico-smart-watch;
+	}
+}
+.ico-running-shoes {
+	&:before {
+		content: $ico-running-shoes;
+	}
+}
+.ico-road-bike {
+	&:before {
+		content: $ico-road-bike;
+	}
+}
+.ico-running-clothes {
+	&:before {
+		content: $ico-running-clothes;
+	}
+}
+.ico-calendar {
+	&:before {
+		content: $ico-calendar;
+	}
+}
+.ico-ssl-encrypt {
+	&:before {
+		content: $ico-ssl-encrypt;
+	}
+}
+.ico-quarter-star-blk {
+	&:before {
+		content: $ico-quarter-star-blk;
+	}
+}
+.ico-half-star-blk {
+	&:before {
+		content: $ico-half-star-blk;
+	}
+}
+.ico-warning {
+	&:before {
+		content: $ico-warning;
+	}
+}
+.ico-smart-phone-esm {
+	&:before {
+		content: $ico-smart-phone-esm;
+	}
+}
+.ico-less-info {
+	&:before {
+		content: $ico-less-info;
+	}
+}
+.ico-more-info {
+	&:before {
+		content: $ico-more-info;
+	}
+}
+.ico-store-exclusivity {
+	&:before {
+		content: $ico-store-exclusivity;
+	}
+}
+.ico-esm-store {
+	&:before {
+		content: $ico-esm-store;
+	}
+}
+.ico-customize {
+	&:before {
+		content: $ico-customize;
+	}
+}
+.ico-leasing {
+	&:before {
+		content: $ico-leasing;
+	}
+}
+.ico-quotation-48-h {
+	&:before {
+		content: $ico-quotation-48-h;
+	}
+}
+.ico-basket-pro-full {
+	&:before {
+		content: $ico-basket-pro-full;
+	}
+}
+.ico-basket-pro {
+	&:before {
+		content: $ico-basket-pro;
+	}
+}
+.ico-stamp {
+	&:before {
+		content: $ico-stamp;
+	}
+}
+.ico-quotation {
+	&:before {
+		content: $ico-quotation;
+	}
+}
+.ico-opex {
+	&:before {
+		content: $ico-opex;
+	}
+}
+.ico-news-letter {
+	&:before {
+		content: $ico-news-letter;
+	}
+}
+.ico-not-connected {
+	&:before {
+		content: $ico-not-connected;
+	}
+}
+.ico-web-exclusivity {
+	&:before {
+		content: $ico-web-exclusivity;
+	}
+}
+.ico-phone-information {
+	&:before {
+		content: $ico-phone-information;
+	}
+}
+.ico-restocking {
+	&:before {
+		content: $ico-restocking;
+	}
+}
+.ico-smart-phone-lepape {
+	&:before {
+		content: $ico-smart-phone-lepape;
+	}
+}
+.ico-detax-free {
+	&:before {
+		content: $ico-detax-free;
+	}
+}
+.ico-comment-right {
+	&:before {
+		content: $ico-comment-right;
+	}
+}
+.ico-comment-done-right {
+	&:before {
+		content: $ico-comment-done-right;
+	}
+}
+.ico-bubble-txt-right {
+	&:before {
+		content: $ico-bubble-txt-right;
+	}
+}
+.ico-bubble-stock-info-right {
+	&:before {
+		content: $ico-bubble-stock-info-right;
+	}
+}
+.ico-bubble-question-right {
+	&:before {
+		content: $ico-bubble-question-right;
+	}
+}
+.ico-bubble-phone-info-right {
+	&:before {
+		content: $ico-bubble-phone-info-right;
+	}
+}
+.ico-bubble-mail-right {
+	&:before {
+		content: $ico-bubble-mail-right;
+	}
+}
+.ico-bubble-no-stock-right {
+	&:before {
+		content: $ico-bubble-no-stock-right;
+	}
+}
+.ico-life-warranty {
+	&:before {
+		content: $ico-life-warranty;
+	}
+}
+.ico-5y-warranty {
+	&:before {
+		content: $ico-5y-warranty;
+	}
+}
+.ico-4y-warranty {
+	&:before {
+		content: $ico-4y-warranty;
+	}
+}
+.ico-1y-warranty {
+	&:before {
+		content: $ico-1y-warranty;
+	}
+}
+.ico-bike-adjustement {
+	&:before {
+		content: $ico-bike-adjustement;
+	}
+}
+.ico-bike-maintenance {
+	&:before {
+		content: $ico-bike-maintenance;
+	}
+}
+.ico-more {
+	&:before {
+		content: $ico-more;
+	}
+}
+.ico-less {
+	&:before {
+		content: $ico-less;
+	}
+}
+.ico-bubble-txt {
+	&:before {
+		content: $ico-bubble-txt;
+	}
+}
+.ico-bubble-mail {
+	&:before {
+		content: $ico-bubble-mail;
+	}
+}
+.ico-bubble-no-stock {
+	&:before {
+		content: $ico-bubble-no-stock;
+	}
+}
+.ico-bubble-stock-info {
+	&:before {
+		content: $ico-bubble-stock-info;
+	}
+}
+.ico-bubble-question {
+	&:before {
+		content: $ico-bubble-question;
+	}
+}
+.ico-bubble-phone-info {
+	&:before {
+		content: $ico-bubble-phone-info;
+	}
+}
+.ico-delivery-24 {
+	&:before {
+		content: $ico-delivery-24;
+	}
+}
+.ico-preferential-price {
+	&:before {
+		content: $ico-preferential-price;
+	}
+}
+.ico-detax-export {
+	&:before {
+		content: $ico-detax-export;
+	}
+}
+.ico-search {
+	&:before {
+		content: $ico-search;
+	}
+}
+.ico-file-pdf {
+	&:before {
+		content: $ico-file-pdf;
+	}
+}
+.ico-Comment-done {
+	&:before {
+		content: $ico-Comment-done;
+	}
+}
+.ico-comment {
+	&:before {
+		content: $ico-comment;
+	}
+}
+.ico-bubble {
+	&:before {
+		content: $ico-bubble;
+	}
+}
+.ico-bike-city {
+	&:before {
+		content: $ico-bike-city;
+	}
+}
+.ico-store {
+	&:before {
+		content: $ico-store;
+	}
+}
+.ico-burger-button-light {
+	&:before {
+		content: $ico-burger-button-light;
+	}
+}
+.ico-basket-full {
+	&:before {
+		content: $ico-basket-full;
+	}
+}
+.ico-basket {
+	&:before {
+		content: $ico-basket;
+	}
+}
+.ico-burger-button {
+	&:before {
+		content: $ico-burger-button;
+	}
+}
+.ico-cross-short {
+	&:before {
+		content: $ico-cross-short;
+	}
+}
+.ico-real-time-stock {
+	&:before {
+		content: $ico-real-time-stock;
+	}
+}
+.ico-store-subway {
+	&:before {
+		content: $ico-store-subway;
+	}
+}
+.ico-store-phone {
+	&:before {
+		content: $ico-store-phone;
+	}
+}
+.ico-store-mail {
+	&:before {
+		content: $ico-store-mail;
+	}
+}
+.ico-zoom-less {
+	&:before {
+		content: $ico-zoom-less;
+	}
+}
+.ico-zoom-more {
+	&:before {
+		content: $ico-zoom-more;
+	}
+}
+.ico-zoom {
+	&:before {
+		content: $ico-zoom;
+	}
+}
+.ico-zoom-circle {
+	&:before {
+		content: $ico-zoom-circle;
+	}
+}
+.ico-4x-without {
+	&:before {
+		content: $ico-4x-without;
+	}
+}
+.ico-3x-without {
+	&:before {
+		content: $ico-3x-without;
+	}
+}
+.ico-2x-without {
+	&:before {
+		content: $ico-2x-without;
+	}
+}
+.ico-3d-plan {
+	&:before {
+		content: $ico-3d-plan;
+	}
+}
+.ico-10y-warranty {
+	&:before {
+		content: $ico-10y-warranty;
+	}
+}
+.ico-6m-warranty {
+	&:before {
+		content: $ico-6m-warranty;
+	}
+}
+.ico-3y-warranty {
+	&:before {
+		content: $ico-3y-warranty;
+	}
+}
+.ico-2y-warranty {
+	&:before {
+		content: $ico-2y-warranty;
+	}
+}
+.ico-circle {
+	&:before {
+		content: $ico-circle;
+	}
+}
+.ico-star-blk {
+	&:before {
+		content: $ico-star-blk;
+	}
+}
+.ico-checkbox-circle-checked {
+	&:before {
+		content: $ico-checkbox-circle-checked;
+	}
+}
+.ico-checkbox-circle-selected {
+	&:before {
+		content: $ico-checkbox-circle-selected;
+	}
+}
+.ico-checkbox-circle {
+	&:before {
+		content: $ico-checkbox-circle;
+	}
+}
+.ico-checkbox-rounded-checked {
+	&:before {
+		content: $ico-checkbox-rounded-checked;
+	}
+}
+.ico-checkbox-rounded-selected {
+	&:before {
+		content: $ico-checkbox-rounded-selected;
+	}
+}
+.ico-checkbox-rounded {
+	&:before {
+		content: $ico-checkbox-rounded;
+	}
+}
+.ico-checkbox-checked {
+	&:before {
+		content: $ico-checkbox-checked;
+	}
+}
+.ico-checkbox-selected {
+	&:before {
+		content: $ico-checkbox-selected;
+	}
+}
+.ico-checkbox {
+	&:before {
+		content: $ico-checkbox;
+	}
+}
+.ico-cross-dot {
+	&:before {
+		content: $ico-cross-dot;
+	}
+}
+.ico-cross {
+	&:before {
+		content: $ico-cross;
+	}
+}
+.ico-mail-blk-social {
+	&:before {
+		content: $ico-mail-blk-social;
+	}
+}
+.ico-in-store-sales {
+	&:before {
+		content: $ico-in-store-sales;
+	}
+}
+.ico-delivery-free {
+	&:before {
+		content: $ico-delivery-free;
+	}
+}
+.ico-delivery-gift {
+	&:before {
+		content: $ico-delivery-gift;
+	}
+}
+.ico-delivery-offer {
+	&:before {
+		content: $ico-delivery-offer;
+	}
+}
+.ico-delivery-cost {
+	&:before {
+		content: $ico-delivery-cost;
+	}
+}
+.ico-delivery-3d {
+	&:before {
+		content: $ico-delivery-3d;
+	}
+}
+.ico-payment-card-234 {
+	&:before {
+		content: $ico-payment-card-234;
+	}
+}
+.ico-payment-card {
+	&:before {
+		content: $ico-payment-card;
+	}
+}
+.ico-payment-card-3ds {
+	&:before {
+		content: $ico-payment-card-3ds;
+	}
+}
+.ico-google-plus {
+	&:before {
+		content: $ico-google-plus;
+	}
+}
+.ico-facebook {
+	&:before {
+		content: $ico-facebook;
+	}
+}
+.ico-twitter {
+	&:before {
+		content: $ico-twitter;
+	}
+}
+.ico-pinterest {
+	&:before {
+		content: $ico-pinterest;
+	}
+}
+.ico-youtube3 {
+	&:before {
+		content: $ico-youtube3;
+	}
+}
+.ico-tumblr {
+	&:before {
+		content: $ico-tumblr;
+	}
+}
+.ico-instagram {
+	&:before {
+		content: $ico-instagram;
+	}
+}
+.ico-arrow-down-dot {
+	&:before {
+		content: $ico-arrow-down-dot;
+	}
+}
+.ico-arrow-up-dot {
+	&:before {
+		content: $ico-arrow-up-dot;
+	}
+}
+.ico-arrow-left-dot {
+	&:before {
+		content: $ico-arrow-left-dot;
+	}
+}
+.ico-arrow-right-dot {
+	&:before {
+		content: $ico-arrow-right-dot;
+	}
+}
+.ico-arrow-up-full {
+	&:before {
+		content: $ico-arrow-up-full;
+	}
+}
+.ico-arrow-down-full {
+	&:before {
+		content: $ico-arrow-down-full;
+	}
+}
+.ico-arrow-left-full {
+	&:before {
+		content: $ico-arrow-left-full;
+	}
+}
+.ico-arrow-right-full {
+	&:before {
+		content: $ico-arrow-right-full;
+	}
+}
+.ico-national-maintenance {
+	&:before {
+		content: $ico-national-maintenance;
+	}
+}
+.ico-exchange-30-d {
+	&:before {
+		content: $ico-exchange-30-d;
+	}
+}
+.ico-connected {
+	&:before {
+		content: $ico-connected;
+	}
+}
+.ico-pre-order {
+	&:before {
+		content: $ico-pre-order;
+	}
+}

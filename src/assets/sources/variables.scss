@@ -1,0 +1,222 @@
+// color settings
+$black: #000 !default;
+$white: #fff !default;
+$light-gray: #dedede !default;
+$gray: #4d4d4d !default;
+$red: #e40000 !default;
+
+$brand-primary: $black;
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+$gray-base: $black !default;
+$gray-darker: lighten($gray-base, 13.5%) !default;
+$gray-dark: lighten($gray-base, 30%) !default;
+$gray-light: lighten($gray-base, 46.7%) !default;
+$gray-lighter: lighten($gray-base, 87%) !default;
+
+$red: #e2001a;
+
+// Media queries breakpoints
+$screen-sm: 420px !default;
+$screen-md: 768px !default;
+$screen-lg: 1024px !default;
+
+$grid-gutter-width: 24px !default;
+
+$container-tablet: ($screen-md + $grid-gutter-width) !default;
+$container-sm: $container-tablet !default;
+$container-desktop: ($screen-lg + $grid-gutter-width) !default;
+$container-md: $container-desktop !default;
+$container-large-desktop: (1200px + $grid-gutter-width) !default;
+
+
+// Default font
+$font-family-sans-serif: "Avenir Book" !default;
+
+$font-size-base: 13px !default;
+$font-size-large: ceil(($font-size-base * 1.2)) !default;
+$font-size-medium: ceil(($font-size-base * 1.1)) !default;
+$font-size-small: ceil(($font-size-base * 0.80)) !default;
+
+$font-size-h1: floor(($font-size-base * 1.9)) !default;
+$font-size-h2: floor(($font-size-base * 1.6)) !default;
+$font-size-h3: ceil(($font-size-base * 1.1)) !default;
+$font-size-h4: ceil(($font-size-base * 1.1)) !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default;
+
+$link-hover-decoration: none !default;
+
+
+// breadcrumbs
+$breadcrumb-padding-vertical: 8px !default;
+$breadcrumb-padding-horizontal: 0px !default;
+//** Breadcrumb background color
+$breadcrumb-bg: #FFF !default;
+//** Breadcrumb text color
+$breadcrumb-color: #ccc !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color: $gray-light !default;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator: "/" !default;
+
+// pannel
+$panel-bg: #fff !default;
+$panel-body-padding: 15px !default;
+$panel-heading-padding: 10px 15px !default;
+$panel-footer-padding: $panel-heading-padding !default;
+$panel-border-radius: 0 !default;
+
+//** Border color for elements within panels
+$panel-inner-border: none !default;
+$panel-footer-bg: none !default;
+
+$panel-default-text: $gray-base !default;
+$panel-default-border: none !default;
+$panel-default-heading-bg: none !default;
+
+$panel-primary-text: #fff !default;
+$panel-primary-border: $brand-primary !default;
+$panel-primary-heading-bg: $brand-primary !default;
+
+$icomoon-font-family: "lepapeico" !default;
+$icomoon-font-path: "fonts" !default;
+
+$ico-smart-watch: "\e95b";
+$ico-running-shoes: "\e95c";
+$ico-road-bike: "\e95d";
+$ico-running-clothes: "\e95e";
+$ico-calendar: "\e95f";
+$ico-ssl-encrypt: "\e960";
+$ico-quarter-star-blk: "\e961";
+$ico-half-star-blk: "\e962";
+$ico-warning: "\e95a";
+$ico-smart-phone-esm: "\e959";
+$ico-less-info: "\e957";
+$ico-more-info: "\e958";
+$ico-store-exclusivity: "\e955";
+$ico-esm-store: "\e956";
+$ico-customize: "\e952";
+$ico-leasing: "\e953";
+$ico-quotation-48-h: "\e954";
+$ico-basket-pro-full: "\e94f";
+$ico-basket-pro: "\e950";
+$ico-stamp: "\e951";
+$ico-quotation: "\e94a";
+$ico-opex: "\e94b";
+$ico-news-letter: "\e94c";
+$ico-not-connected: "\e94e";
+$ico-web-exclusivity: "\e93a";
+$ico-phone-information: "\e939";
+$ico-restocking: "\e938";
+$ico-smart-phone-lepape: "\e936";
+$ico-detax-free: "\e949";
+$ico-comment-right: "\e93e";
+$ico-comment-done-right: "\e93f";
+$ico-bubble-txt-right: "\e940";
+$ico-bubble-stock-info-right: "\e941";
+$ico-bubble-question-right: "\e942";
+$ico-bubble-phone-info-right: "\e943";
+$ico-bubble-mail-right: "\e944";
+$ico-bubble-no-stock-right: "\e945";
+$ico-life-warranty: "\e946";
+$ico-5y-warranty: "\e947";
+$ico-4y-warranty: "\e948";
+$ico-1y-warranty: "\e93d";
+$ico-bike-adjustement: "\e935";
+$ico-bike-maintenance: "\e934";
+$ico-more: "\e933";
+$ico-less: "\e932";
+$ico-bubble-txt: "\e931";
+$ico-bubble-mail: "\e930";
+$ico-bubble-no-stock: "\e92d";
+$ico-bubble-stock-info: "\e92f";
+$ico-bubble-question: "\e92e";
+$ico-bubble-phone-info: "\e92c";
+$ico-delivery-24: "\e92b";
+$ico-preferential-price: "\e92a";
+$ico-detax-export: "\e929";
+$ico-search: "\e928";
+$ico-file-pdf: "\e925";
+$ico-Comment-done: "\e926";
+$ico-comment: "\e927";
+$ico-bubble: "\e927";
+$ico-bike-city: "\e922";
+$ico-store: "\e923";
+$ico-burger-button-light: "\e924";
+$ico-basket-full: "\e91a";
+$ico-basket: "\e91b";
+$ico-burger-button: "\e91c";
+$ico-cross-short: "\e91d";
+$ico-real-time-stock: "\e91e";
+$ico-store-subway: "\e91f";
+$ico-store-phone: "\e920";
+$ico-store-mail: "\e921";
+$ico-zoom-less: "\e915";
+$ico-zoom-more: "\e916";
+$ico-zoom: "\e917";
+$ico-zoom-circle: "\e918";
+$ico-4x-without: "\e919";
+$ico-3x-without: "\e914";
+$ico-2x-without: "\e911";
+$ico-3d-plan: "\e912";
+$ico-10y-warranty: "\e913";
+$ico-6m-warranty: "\e90e";
+$ico-3y-warranty: "\e90f";
+$ico-2y-warranty: "\e910";
+$ico-circle: "\e90d";
+$ico-star-blk: "\e900";
+$ico-checkbox-circle-checked: "\e901";
+$ico-checkbox-circle-selected: "\e902";
+$ico-checkbox-circle: "\e903";
+$ico-checkbox-rounded-checked: "\e904";
+$ico-checkbox-rounded-selected: "\e905";
+$ico-checkbox-rounded: "\e906";
+$ico-checkbox-checked: "\e907";
+$ico-checkbox-selected: "\e908";
+$ico-checkbox: "\e909";
+$ico-cross-dot: "\e90a";
+$ico-cross: "\e90b";
+$ico-mail-blk-social: "\e90c";
+$ico-in-store-sales: "\e600";
+$ico-delivery-free: "\e601";
+$ico-delivery-gift: "\e602";
+$ico-delivery-offer: "\e603";
+$ico-delivery-cost: "\e604";
+$ico-delivery-3d: "\e605";
+$ico-payment-card-234: "\e606";
+$ico-payment-card: "\e607";
+$ico-payment-card-3ds: "\e608";
+$ico-google-plus: "\e60a";
+$ico-facebook: "\e60b";
+$ico-twitter: "\e60c";
+$ico-pinterest: "\e60d";
+$ico-youtube3: "\e60e";
+$ico-tumblr: "\e60f";
+$ico-instagram: "\e610";
+$ico-arrow-down-dot: "\e611";
+$ico-arrow-up-dot: "\e612";
+$ico-arrow-left-dot: "\e613";
+$ico-arrow-right-dot: "\e614";
+$ico-arrow-up-full: "\e615";
+$ico-arrow-down-full: "\e616";
+$ico-arrow-left-full: "\e617";
+$ico-arrow-right-full: "\e618";
+$ico-national-maintenance: "\e93c";
+$ico-exchange-30-d: "\e93b";
+$ico-connected: "\e94d";
+$ico-pre-order: "\e937";
+
+$sale-30-color: #00aeef;
+$sale-40-color: #ff6600;
+$sale-50-color: #f21153;
+$sale-60-color: #e00070;
+$sale-70-color: #b30356;
+$sale-80-color: #8f034a;
+
+$menu-background-color: $gray-base;
+$menu-height: 50px;
+$menu-item-spacing: 7px;

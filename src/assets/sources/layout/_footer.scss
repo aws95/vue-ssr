@@ -1,0 +1,57 @@
+footer {
+  background-color: $black;
+  padding: 20px 0;
+  padding-bottom: 0;
+
+  a, p {
+    color: $gray-lighter;
+    margin-bottom: 3px;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  .title {
+    font-size: $font-size-medium;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .block {
+    margin-bottom: 25px;
+  }
+
+  .button-newsletter {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    padding:2px;
+    cursor: pointer;
+    text-align: center;
+
+      span {
+        padding-top: 4px;
+        display: block;
+        font-family: Oswald;
+      }
+  }
+
+  .social-icons i{
+    color: white;
+  }
+
+  .footer-bottom {
+    background-color: $gray-lighter;
+    padding: 12px 12px;
+  }
+
+  address {
+    margin: 0;
+  }
+}

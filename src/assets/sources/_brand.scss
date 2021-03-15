@@ -1,0 +1,188 @@
+
+.brands-page {
+
+  .page-title {
+
+    .logo {
+      text-align: center;
+      img {
+        display: inline-block;
+        height: 35px;
+        width: auto;
+        margin: 5px 0;
+      }
+    }
+  }
+  .slider-container .slider-bellow {
+    background-color: #000000;
+    line-height: 35px;
+    text-align: center;
+    a {
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+
+  .content-inner {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    float: none;
+    @include clearfix();
+    .title {
+      text-transform: uppercase;
+      text-align: center;
+      border-bottom: 1px solid $gray-lighter;
+      margin: 12px 0;
+    }
+    .catchphrase {
+      text-transform: uppercase;
+      font-family: Oswald;
+      @media(max-width: $screen-xs-max) {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      &:after {
+        display: block;
+        content: '';
+        width: 50%;
+        margin-top: 10px;
+        border-bottom: 2px solid #000000;
+        @media(max-width: $screen-xs-max) {
+          margin: 5px auto;
+        }
+      }
+    }
+    .authorized-retailer {
+      text-transform: uppercase;
+      margin-top: 25px;
+      @media(max-width: $screen-xs-max) {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .logo {
+        text-align: center;
+        @media(max-width: $screen-md-max) {
+          display: none;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    .size-guide {
+      font-weight: bold;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+    .brand-banner {
+      margin-bottom: 25px;
+    }
+  }
+
+  .layer-selection {
+    text-align: center;
+    margin-bottom: 100px;
+    .category-title {
+      @include stripped-title($min-width: 40%);
+    }
+    .content {
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+      .item {
+        display: inline-block;
+        vertical-align: top;
+        float: none !important;
+        .title {
+          background-color: $gray-base;
+          color: white;
+          line-height: 30px;
+          a {
+            display: block;
+            color: white;
+          }
+        }
+        li {
+          list-style: none;
+          .separator {
+            margin: 5px auto;
+          }
+          &:first-child .separator {
+            margin-top: 0;
+          }
+        }
+        a {
+          color: lighten($gray-base, 20);
+        }
+      }
+    }
+  }
+}
+
+.brands-carousel {
+  height: 160px;
+  overflow: hidden;
+  padding: 0 12px;
+
+  .black-title {
+    margin: 24px 0;
+  }
+  .view-all {
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    .button {
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+  .subtitle p {
+    text-transform: uppercase;
+    font-family: Oswald;
+  }
+  .brand-logo {
+    .logo {
+      height: 100px;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .slick-slider {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.tampon-brand-list {
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 24px;
+  .tampon-group-title {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    line-height: 25px;
+    border-bottom: solid 1px $gray-lighter;
+  }
+  a {
+    line-height: 22px;
+    i {
+      display: inline-block;
+      font-size: 0.45em;
+      margin-right: 2px;
+      margin-top: -4px;
+      color: white;
+    }
+    &:hover > i {
+      color: black;
+    }
+  }
+}
