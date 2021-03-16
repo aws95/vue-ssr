@@ -11,8 +11,10 @@ const dev_template = fs.readFileSync(
   path.resolve(__dirname, "index.html"),
   "utf-8"
 );
-/*const prod_tempate =
-  fs.readFileSync(path.resolve(__dirname, "./dist/index.html"), "utf-8");*/
+const prod_tempate = fs.readFileSync(
+  path.resolve(__dirname, "./dist/index.html"),
+  "utf-8"
+);
 
 const createRenderer = (bundle, template) =>
   vueServerRenderer.createBundleRenderer(bundle, {

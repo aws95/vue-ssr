@@ -4,17 +4,17 @@
     <h1>
       Current route :
     </h1>
-    <div>{{ $route.params.id }}</div>
+    <div>{{ $route.path }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "User",
+  name: "Category",
 
   metaInfo: {
-    title: "User Page",
-    meta: [{ name: "description", content: "User page description" }],
+    title: "Category Page",
+    meta: [{ name: "description", content: "Category page description" }],
   },
 };
 </script>
